@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="node_modules/hacktimer/HackTimer.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>
+        Blink expensive background timer throttling demo.
+      </h1>
+
+      <p>
+        This page contains a task which busy-waits for 50ms and runs in cycle every 500ms.
+      </p>
+
+      <ul>
+        <li>When page is not throttled (e.g. page is foregrounded), interval between tasks should be around 500ms. </li>
+        <li>When page is backgrounded and expensive background timer throttling is not enabled, interval between tasks should be around 1000ms. </li>
+        <li>When expensive background timer throttling is enabled, interval between tasks should be around 5000ms. </li>
+      </ul>
+
+      Intervals between tasks:
+
+      <ul id="list">
+      </ul>
+
+</body>
+</html>
